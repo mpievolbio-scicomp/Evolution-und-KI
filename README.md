@@ -71,3 +71,11 @@ max 60min
 ### Durchfuehren der Simulation	
 ### Analyse der Resultate 	
 ### Zusammenfassung und Ausblick 	
+
+
+## Orga:
+* 1. Einheit: 10:30-11:15 (bis Ende Neuronale Netze, Hyperparameter)
+* 2. Einheit: 11:30-ca 13:00
+
+## Techniktest:
+25.11. ca 9:30-10:00
