@@ -96,18 +96,17 @@ def get_model_str(model):
         model.summary()
     return model_str.getvalue()
 
-def git_pull():
-    command = "git pull --rebase"
+def git_pull(name):
+    command = "scp -oStrictHostKeyChecking=no -l mplm1023 gwdu20.gwdg.de:/tmp/mplm10/{}.json .".format(name)
+    if name == 'all':
+        command = "scp -oStrictHostKeyChecking=no mplm1023@gwdu20.gwdg.de:/tmp/mplm10/*.json .".format(name)
     with Popen(shlex.split(command), shell=False, stdout=PIPE, stderr=STDOUT) as proc:
         print(proc.stdout.read())
 
 def git_push(name):
-    git_add_cmd = "git add {}.json".format(name)
-    git_commit_cmd = "git commit {0:s}.json -m 'Update {0:s}'".format(name)
-    git_push_cmd = "git push"
-    for cmd in [git_add_cmd, git_commit_cmd, git_push_cmd]:
-        with Popen(shlex.split(cmd), shell=False, stdout=PIPE, stderr=STDOUT) as proc:
-            print(proc.stdout.read())
+    command = "scp -oStrictHostKeyChecking=no {0:s}.json mplm1023@gwdu20.gwdg.de:/tmp/mplm10/.".format(name)
+    with Popen(shlex.split(command), shell=False, stdout=PIPE, stderr=STDOUT) as proc:
+        print(proc.stdout.read())
 
 def load_data():
     data = load_mnist()
