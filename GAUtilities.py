@@ -97,7 +97,7 @@ def get_model_str(model):
     return model_str.getvalue()
 
 def git_pull(name):
-    command = "scp -oStrictHostKeyChecking=no -l mplm1023 gwdu20.gwdg.de:/tmp/mplm10/{}.json .".format(name)
+    command = "scp -oStrictHostKeyChecking=no mplm1023@gwdu20.gwdg.de:/tmp/mplm10/{}.json .".format(name)
     if name == 'all':
         command = "scp -oStrictHostKeyChecking=no mplm1023@gwdu20.gwdg.de:/tmp/mplm10/*.json .".format(name)
     with Popen(shlex.split(command), shell=False, stdout=PIPE, stderr=STDOUT) as proc:
