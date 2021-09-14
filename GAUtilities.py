@@ -10,6 +10,7 @@ from ipywidgets.widgets.interaction import show_inline_matplotlib_plots
 from keras import backend as K
 import sys
 from keras.models import Sequential
+import owncloud
 
 sys.path.insert(0, '../gahyparopt/')
 from gahyperopt import GADriver, Chromosome, LayerLayout, evaluate_model, load_mnist
@@ -96,6 +97,26 @@ def get_model_str(model):
         model.summary()
     return model_str.getvalue()
 
+SHAREURL='https://owncloud.gwdg.de/index.php/s/yKLtY9e230MeuRY'
+    
+def sync_remote_to_local(name):
+
+    public_link = SHAREURL
+
+    # Connect to owncloud.
+    oc = owncloud.Client.from_public_link(public_link)
+    
+    # List content
+    fhs = oc.list('.')
+    
+    # List of json files.
+    jsons = [fh.get_name() for fh in fhs]
+    jsons = [fh for fh in jsons if fh.split('.')[-1]=='json']
+
+    # Get all json files.
+    for j in jsons:
+        oc.get_file(j,j)
+    
 def git_pull(name):
     command = "scp -oStrictHostKeyChecking=no mplm1023@gwdu20.gwdg.de:/tmp/mplm10/{}.json .".format(name)
     if name == 'all':
