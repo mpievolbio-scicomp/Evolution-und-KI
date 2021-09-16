@@ -1,11 +1,9 @@
 # Evolution und KI 	
-ca. 110-120 min
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mpievolbio-scicomp/Evolution-und-KI/blob/master/GASpiel_sc.ipynb)
 	
 ## Begruessung, Vorstellung
-2min
 	
 ## Einleitung  
-10min
 ### Begriffe und Abgrenzungen	
 * KI	
 * Maschinelles Lernen	
@@ -21,7 +19,6 @@ ca. 110-120 min
 	
 	
 ## Struktur Neuronaler Netze 	
-10min
 * Analogie zur Biologie	
 * kuenstliche Neuronen: 	
   - Eingaenge	
@@ -35,7 +32,6 @@ ca. 110-120 min
   - Ausgangsschicht	
 	
 ## Training Neuronaler Netze	
-10min
 * Trainingsdaten	
 * Splitten der Trainingsdaten	
 * Uebertraining	
@@ -46,8 +42,6 @@ ca. 110-120 min
 * Kurzreferat: Vektoren, Matrizen oder  Funktionen und Ableitungen 	
 	
 ## Genetischer Algorithmus
-15min
--> Kurzreferat Genetik	
 ### Genotyp und Phaenotyp	
 ### Hyperparameter als Chromosom eines Netzwerks	
 ### Selektion	
@@ -55,7 +49,6 @@ ca. 110-120 min
 ### Genetischer Algorithmus zur Optimierung der Hyperparameter	
 	
 ## Anwendungsbeispiel
-max 60min
 ### Der MNIST Datensatz 	
 * Groesse des Datensatzes	
 * Beispielbilder	
@@ -71,11 +64,3 @@ max 60min
 ### Durchfuehren der Simulation	
 ### Analyse der Resultate 	
 ### Zusammenfassung und Ausblick 	
-
-
-## Orga:
-* 1. Einheit: 10:30-11:15 (bis Ende Neuronale Netze, Hyperparameter)
-* 2. Einheit: 11:30-ca 13:00
-
-## Techniktest:
-25.11. ca 9:30-10:00
