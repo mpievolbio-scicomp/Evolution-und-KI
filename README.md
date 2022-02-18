@@ -64,3 +64,14 @@
 ### Durchfuehren der Simulation	
 ### Analyse der Resultate 	
 ### Zusammenfassung und Ausblick 	
+
+# Präsentation in slides.html konvertieren:
+```
+jupyter nbconvert Evolution_und_KI.ipynb --to slides --no-prompt --TagRemovePreprocessor.remove_input_tags={\"hide-input\"} --ServePostProcessor.port=8910 --ServerPostProcessor.ip='0.0.0.0' --SlidesExporter.reveal_theme=simple
+```
+
+# Simple http server starten:
+```
+python -m http.server --bind x.x.x.x
+```
+Then go to http://thisserver.xyz:8000
