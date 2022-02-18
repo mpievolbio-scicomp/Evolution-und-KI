@@ -1,0 +1,17 @@
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - ipywidgets
+  - keras
+  - matplotlib
+  - pandas
+  - numpy
+  - tensorflow==2.2
+  - ipython
+  - ipykernel  
+  - networkx
+  - tikzmagic
+  - pip
+  - pip:
+    - pyocclient
