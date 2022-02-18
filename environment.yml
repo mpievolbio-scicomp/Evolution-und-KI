@@ -12,6 +12,9 @@ dependencies:
   - ipykernel  
   - networkx
   - tikzmagic
+  - tensorflow-gpu
+  - cudatoolkit
   - pip
   - pip:
     - pyocclient
+
