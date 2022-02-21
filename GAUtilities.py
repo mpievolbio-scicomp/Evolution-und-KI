@@ -11,6 +11,7 @@ from keras import backend as K
 import sys
 from keras.models import Sequential
 import owncloud
+import glob
 
 SHAREURL='https://owncloud.gwdg.de/index.php/s/yKLtY9e230MeuRY'
 
@@ -122,7 +123,34 @@ def sync_remote_to_local(name):
     for j in jsons:
         oc.get_file(j,j)
         
+def delete_local(name=None):
+    """ Remove this players json file from the local. Remove all if no `name` given. """
+    
+    if name is not None:
+        fnames = [name+".json"]
+    else:
+        fnames =  glob.glob('*.json')
         
+    for fname in fnames:
+        os.remove(fname)
+    
+        
+def delete_remote(name=None):
+    """ Remove this players json file from the remote. Remove all if no `name` given. """
+    public_link = SHAREURL
+
+    # Connect to owncloud.
+    oc = owncloud.Client.from_public_link(public_link)
+    
+    if name is not None:
+        fnames = [name+".json"]
+    else:
+        fnames =  glob.glob('*.json')
+        
+    for fname in fnames:
+        oc.delete(fname)
+    
+    
 def sync_local_to_remote(name):
     """ Upload this players json file to the owncloud share. Overwrites all existing files on the remote side."""
 

@@ -14,6 +14,8 @@ dependencies:
   - tikzmagic
   - tensorflow-gpu
   - cudatoolkit
+  - pydotplus
+  - graphviz
   - pip
   - pip:
     - pyocclient
