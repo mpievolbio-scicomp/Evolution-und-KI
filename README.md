@@ -1,5 +1,5 @@
 # Evolution und KI 	
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mpievolbio-scicomp/Evolution-und-KI/blob/master/GASpiel_sc.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mpievolbio-scicomp/Evolution-und-KI/blob/master/GASpiel.ipynb)
 	
 ## Begruessung, Vorstellung
 	
