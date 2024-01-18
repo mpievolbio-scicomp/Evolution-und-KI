@@ -1,22 +1,22 @@
 channels:
-  - defaults
   - conda-forge
 dependencies:
+  - python<=3.10
+  - jupyterlab
   - ipywidgets
   - keras
   - matplotlib
   - pandas
   - numpy
-  - tensorflow==2.2
+  - tensorflow>=2.2
   - ipython
   - ipykernel  
   - networkx
   - tikzmagic
-  - tensorflow-gpu
-  - cudatoolkit
   - pydotplus
   - graphviz
   - pip
   - pip:
     - pyocclient
+    - git+https://github.com/mpievolbio-scicomp/gahyparopt
 
